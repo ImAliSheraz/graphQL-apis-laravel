@@ -22,6 +22,7 @@ type Query {
     # ): [User!]! @paginate(defaultCount: 10)
 
     users: [User!] @all
+    users: [User!] @paginate
 
     greetings: String
 }
@@ -46,6 +47,3 @@ type User {
     # "When the account was last updated."
     # updated_at: DateTime!
 }
-
-
-
