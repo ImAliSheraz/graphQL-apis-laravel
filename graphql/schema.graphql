@@ -47,3 +47,8 @@ type User {
     # "When the account was last updated."
     # updated_at: DateTime!
 }
+
+type Mutation {
+    createUser(name: String!, email:String!) :User! @create
+    updateUser(id: ID!, name: String!, email:String!) :User! @update
+}
